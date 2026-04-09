@@ -8,10 +8,12 @@ import Location from './components/Location';
 import Reviews from './components/Reviews';
 import AvailabilityCalendar from './components/AvailabilityCalendar';
 import ScrollReveal from './components/ScrollReveal';
+import StickyBookButton from './components/StickyBookButton';
 
 export default function Home() {
   return (
     <main>
+      <StickyBookButton />
       <Hero />
       <ScrollReveal>
         <Gallery />

@@ -23,7 +23,7 @@ export default function BeautyServices() {
     {
       title: 'Beauty Treatments',
       description:
-        'From lashes to waxing, enjoy a full menu of beauty treatments without leaving the comfort of the cottage.',
+        'From lashes to waxing, enjoy a full menu of beauty treatments at the on-site salon just steps from the cottage.',
       icon: (
         <svg className="w-10 h-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
@@ -41,7 +41,7 @@ export default function BeautyServices() {
             <svg className="w-4 h-4 text-rose-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
             </svg>
-            <span className="text-sm font-semibold text-rose-700 uppercase tracking-wider">In-Home Pampering</span>
+            <span className="text-sm font-semibold text-rose-700 uppercase tracking-wider">On-Site Pampering</span>
           </div>
         </div>
 
@@ -49,8 +49,8 @@ export default function BeautyServices() {
           Pamper Yourself During Your Stay
         </h2>
         <p className="text-center text-gray-600 text-xl mb-16 max-w-3xl mx-auto leading-relaxed">
-          Your host Viktoria is a qualified beauty therapist. Book an in-home pamper session and
-          enjoy professional treatments without leaving the cottage.
+          Your host Viktoria is a qualified beauty therapist with a dedicated on-site salon. Book a
+          treatment during your stay and walk just a few steps for professional pampering.
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">

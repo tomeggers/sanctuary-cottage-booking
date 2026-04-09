@@ -11,6 +11,7 @@ interface BookingRequest {
   total: number;
   guests: number;
   hasDog: boolean;
+  dogBreed: string;
   message: string;
 }
 
@@ -63,6 +64,14 @@ export async function POST(request: Request) {
             <td style="padding: 8px 0; color: #78716c;">Bringing a dog?</td>
             <td style="padding: 8px 0;">${body.hasDog ? "Yes" : "No"}</td>
           </tr>
+          ${
+            body.hasDog && body.dogBreed
+              ? `<tr>
+                  <td style="padding: 8px 0; color: #78716c;">Dog breed</td>
+                  <td style="padding: 8px 0; font-weight: 600;">${body.dogBreed}</td>
+                </tr>`
+              : ""
+          }
         </table>
 
         <div style="background: #fef3c7; padding: 16px; border-radius: 8px; margin: 20px 0;">

@@ -31,6 +31,7 @@ export default function AvailabilityCalendar() {
   const [phone, setPhone] = useState("");
   const [guests, setGuests] = useState(2);
   const [hasDog, setHasDog] = useState(false);
+  const [dogBreed, setDogBreed] = useState("");
   const [message, setMessage] = useState("");
 
   useEffect(() => {
@@ -92,6 +93,7 @@ export default function AvailabilityCalendar() {
           total: totalPrice,
           guests,
           hasDog,
+          dogBreed: hasDog ? dogBreed : "",
           message,
         }),
       });
@@ -378,6 +380,26 @@ export default function AvailabilityCalendar() {
                           </button>
                         </div>
                       </div>
+
+                      {hasDog && (
+                        <div>
+                          <label htmlFor="dogBreed" className="block text-sm font-medium text-gray-700 mb-1">
+                            Dog breed *
+                          </label>
+                          <input
+                            id="dogBreed"
+                            type="text"
+                            required
+                            value={dogBreed}
+                            onChange={(e) => setDogBreed(e.target.value)}
+                            className="w-full px-3 py-2.5 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-transparent"
+                            placeholder="e.g. Labrador, Border Collie"
+                          />
+                          <p className="text-xs text-gray-500 mt-1">
+                            So we can make sure your pup is a good fit for the property
+                          </p>
+                        </div>
+                      )}
 
                       <div>
                         <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">
