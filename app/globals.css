@@ -1,26 +1,162 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
+  --color-background: #ffffff;
+  --color-foreground: #1c1917;
+  --color-accent: #b45309;
+  --color-accent-light: #fef3c7;
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-background);
+  color: var(--color-foreground);
+  font-family: var(--font-sans), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Enhanced Calendar Styling */
+
+/* Calendar range: thin connecting line between check-in/check-out */
+.range-middle-day {
+  position: relative;
+}
+
+.range-middle-day::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #d97706 0%, #ea580c 100%);
+  transform: translateY(-50%);
+  z-index: 0;
+}
+
+/* Extend line from start circle to the right */
+.range-start-day {
+  position: relative;
+}
+
+.range-start-day::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #d97706 0%, #ea580c 100%);
+  transform: translateY(-50%);
+  z-index: 0;
+}
+
+/* Extend line from left to end circle */
+.range-end-day {
+  position: relative;
+}
+
+.range-end-day::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 50%;
+  height: 2px;
+  background: linear-gradient(90deg, #d97706 0%, #ea580c 100%);
+  transform: translateY(-50%);
+  z-index: 0;
+}
+
+/* Smooth transitions for hover effects */
+* {
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+/* Remove transition from transform and opacity for performance */
+.no-transition {
+  transition: none;
+}
+
+/* Enhanced focus states for accessibility */
+*:focus-visible {
+  outline: 2px solid #d97706;
+  outline-offset: 2px;
+  border-radius: 0.25rem;
+}
+
+/* Custom scrollbar styling */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f5f5f4;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #d6d3d1;
+  border-radius: 6px;
+  border: 2px solid #f5f5f4;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a8a29e;
+}
+
+/* Selection styling */
+::selection {
+  background-color: #fef3c7;
+  color: #78350f;
+}
+
+::-moz-selection {
+  background-color: #fef3c7;
+  color: #78350f;
+}
+
+/* Image loading optimization */
+img {
+  content-visibility: auto;
+}
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Scroll reveal transitions */
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.scroll-reveal.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Print styles */
+@media print {
+  .no-print {
+    display: none !important;
+  }
 }

@@ -1,0 +1,135 @@
+{
+  "hero": {
+    "headline": "Find Your Sanctuary",
+    "subheadline": "A peaceful countryside cottage nestled on 5 acres of tranquil farmland, just minutes from Nelson",
+    "tagline": "Hope, Tasman \u2014 New Zealand"
+  },
+  "property_description": {
+    "heading": "Your Own Private Retreat",
+    "body": "Some places simply feel different the moment you arrive. Sanctuary Cottage is one of them. Set on a quiet 5-acre hobby farm within a 115-year-old villa estate, this charming two-story cottage offers the kind of stillness and space that's hard to find. Pond views, birdsong, open skies \u2014 and nothing else to interrupt your peace.\n\nUpstairs, a cozy attic-style bedroom with a king bed. Downstairs, an open-plan living space with a fully equipped kitchen, lounge, and dining area. Your own private driveway, your own lawn, your own hot tub under the stars. The whole guest area is completely separate and fenced, so your retreat is entirely yours."
+  },
+  "dog_friendly": {
+    "heading": "Perfect for Dogs and Their Owners",
+    "intro": "We understand that your four-legged family member isn't just a pet — they're part of your getaway. Sanctuary Cottage has been thoughtfully designed and fenced to give dogs the freedom and safety they deserve. The entire guest area is fully enclosed, and you'll have access to a dedicated fenced paddock where your dog can run freely, exercise, and play with complete peace of mind.",
+    "features": [
+      {
+        "title": "Fully Fenced Guest Area",
+        "description": "The entire cottage and surrounding grounds are securely fenced, creating a safe, contained space where your dog can explore and relax without any risk of wandering."
+      },
+      {
+        "title": "Private Fenced Paddock",
+        "description": "A dedicated exercise area where your dog can run free and burn off energy in complete safety, perfect for active breeds or dogs who love open spaces."
+      },
+      {
+        "title": "Separate from Host Dogs",
+        "description": "Our host's golden retrievers are fenced separately from the guest area, allowing a peaceful stay for dogs who prefer their own space or have specific temperament needs."
+      },
+      {
+        "title": "Countryside Setting",
+        "description": "Your dog will experience the joy of rural life — open spaces, fresh air, and the freedom to be a dog, all while remaining safe and contained."
+      }
+    ]
+  },
+  "amenities": {
+    "heading": "Everything You Need for Comfort",
+    "intro": "The cottage is thoughtfully equipped with everything for a memorable stay.",
+    "categories": [
+      {
+        "name": "Comfort & Relaxation",
+        "items": [
+          "King bed with quality linen",
+          "Private hot tub",
+          "Garden and pond views",
+          "Complete privacy and seclusion"
+        ]
+      },
+      {
+        "name": "Kitchen & Dining",
+        "items": [
+          "Full kitchen with fridge and bench oven",
+          "Microwave, toaster, and electric fry pan",
+          "Dining area with countryside views",
+          "All crockery, cutlery, and cookware provided"
+        ]
+      },
+      {
+        "name": "Connectivity & Convenience",
+        "items": [
+          "Wifi",
+          "Free private parking",
+          "Washing machine"
+        ]
+      },
+      {
+        "name": "Special Touches",
+        "items": [
+          "Pets welcome (on request)",
+          "Pamper treatments available from host",
+          "Peaceful garden access",
+          "Hobby farm setting with resident animals"
+        ]
+      }
+    ]
+  },
+  "location": {
+    "heading": "Peace, Close to Everything",
+    "body": "Sanctuary Cottage sits in the heart of Hope, Tasman — a tranquil countryside setting just 10-15 minutes from both Nelson city and Richmond. Wakefield is 18 minutes away, Brightwater just 10. Wake to birdsong and pond views, yet have cafes, restaurants, galleries, and shops within a short drive.\n\nThe location is perfect as a base for exploring the wider Nelson Tasman region. Cycle the Great Taste Trail through vineyards and countryside, take a day trip to Abel Tasman National Park, visit Nelson Lakes, or enjoy Tahunanui Beach. Local wineries, craft breweries, and Richmond's weekend markets are all within easy reach. The 5-acre grounds provide genuine countryside peace, yet everything you need is never far away.",
+    "highlights": [
+      {
+        "label": "Nelson & Richmond",
+        "detail": "10-15 minutes to Nelson city centre and Richmond shops, cafes, and restaurants"
+      },
+      {
+        "label": "Wakefield & Brightwater",
+        "detail": "10-18 minutes to the charming villages of Brightwater and Wakefield"
+      },
+      {
+        "label": "Great Taste Trail",
+        "detail": "Ideal base for cycling the Tasman's Great Taste Trail through vineyards and countryside"
+      },
+      {
+        "label": "Abel Tasman & Beyond",
+        "detail": "Day trips to Abel Tasman National Park, Nelson Lakes, Tahunanui Beach, and local wineries"
+      }
+    ]
+  },
+  "reviews": {
+    "heading": "Trusted by Guests Worldwide",
+    "summary": "With a 4.95-star rating from over 436 reviews, Sanctuary Cottage consistently exceeds expectations. Guests praise the peaceful setting, welcoming host, and perfect accommodations for a romantic countryside escape.",
+    "rating": 4.95,
+    "review_count": 436,
+    "highlights": [
+      "The most peaceful place we've ever stayed. Waking up to pond views and complete silence was exactly what we needed. Viktoria is a wonderful host. Will definitely return.",
+      "A hidden gem. The views, the quiet, the cleanliness \u2014 everything was perfect. Viktoria's attention to detail made our anniversary getaway truly special.",
+      "Absolutely charming property. So peaceful and private, yet close enough to Nelson for exploring. The hot tub under the stars was the highlight of our trip.",
+      "We brought our dog and the fenced paddock was perfect \u2014 he had the time of his life. But honestly, the peace and quiet is what makes this place so special."
+    ]
+  },
+  "seo": {
+    "title": "Sanctuary Cottage | Peaceful Retreat in Hope, Nelson NZ",
+    "meta_description": "A peaceful countryside cottage on 5 acres in Hope, Tasman. Private hot tub, pond views, dog-friendly with fenced paddock. 4.95 stars from 436 reviews.",
+    "keywords": [
+      "peaceful cottage Nelson",
+      "quiet retreat Tasman New Zealand",
+      "cottage Hope Tasman",
+      "countryside retreat Nelson",
+      "couples cottage with hot tub Nelson",
+      "private cottage Nelson NZ",
+      "holiday cottage Hope Nelson",
+      "peaceful accommodation Tasman",
+      "rural retreat near Richmond Nelson",
+      "dog-friendly cottage Nelson",
+      "pet-friendly accommodation Tasman",
+      "dog-friendly holiday rental New Zealand",
+      "fenced property dogs Nelson",
+      "dog-friendly places to stay Tasman",
+      "private hot tub cottage Nelson",
+      "hobby farm stay Nelson",
+      "sanctuary cottage Hope",
+      "tranquil getaway Nelson Tasman",
+      "best cottages Nelson NZ"
+    ],
+    "og_title": "Sanctuary Cottage \u2014 Peaceful Countryside Retreat, Hope, Nelson",
+    "og_description": "A tranquil cottage retreat on a 5-acre hobby farm in Hope, Tasman. Pond views, private hot tub, and dog-friendly with a fenced paddock. Rated 4.95 stars."
+  }
+}
