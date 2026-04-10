@@ -7,17 +7,17 @@ export default function StickyBookButton() {
 
   useEffect(() => {
     const handleScroll = () => {
-      // Show after scrolling past ~80% of viewport height (past hero)
+      // Show after scrolling past ~60% of viewport height (past hero)
       const scrolled = window.scrollY;
-      const showThreshold = window.innerHeight * 0.8;
+      const showThreshold = window.innerHeight * 0.6;
 
-      // Hide when near the booking section so it doesn't overlap
+      // Hide when the booking section itself is visible
       const bookSection = document.getElementById('book');
-      const nearBookSection = bookSection
-        ? scrolled + window.innerHeight >= bookSection.offsetTop + 100
+      const bookVisible = bookSection
+        ? bookSection.getBoundingClientRect().top < window.innerHeight - 100
         : false;
 
-      setVisible(scrolled > showThreshold && !nearBookSection);
+      setVisible(scrolled > showThreshold && !bookVisible);
     };
 
     handleScroll();
@@ -27,15 +27,16 @@ export default function StickyBookButton() {
 
   return (
     <div
-      className={`fixed top-4 left-1/2 -translate-x-1/2 z-50 transition-all duration-300 ${
-        visible
-          ? 'opacity-100 translate-y-0 pointer-events-auto'
-          : 'opacity-0 -translate-y-4 pointer-events-none'
-      }`}
+      className="fixed top-0 left-0 right-0 z-50 flex justify-center pointer-events-none"
+      style={{ paddingTop: '1rem' }}
     >
       <a
         href="#book"
-        className="inline-flex items-center gap-2 bg-gradient-to-r from-amber-600 to-orange-600 hover:from-amber-700 hover:to-orange-700 text-white px-6 py-3 rounded-full font-semibold text-sm md:text-base shadow-xl shadow-amber-600/40 hover:shadow-2xl hover:scale-105 transition-all duration-300 backdrop-blur-sm border border-white/20"
+        className={`inline-flex items-center gap-2 bg-gradient-to-r from-amber-600 to-orange-600 hover:from-amber-700 hover:to-orange-700 text-white px-6 py-3 rounded-full font-semibold text-sm md:text-base shadow-xl shadow-amber-600/40 hover:shadow-2xl border border-white/20 transition-all duration-300 ${
+          visible
+            ? 'opacity-100 translate-y-0 pointer-events-auto hover:scale-105'
+            : 'opacity-0 -translate-y-6 pointer-events-none'
+        }`}
       >
         <svg className="w-4 h-4 md:w-5 md:h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
