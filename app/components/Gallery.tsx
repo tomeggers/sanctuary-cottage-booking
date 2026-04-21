@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import Image from "next/image";
 import property from '@/data/property.json';
 
 export default function Gallery() {
@@ -43,12 +44,16 @@ export default function Gallery() {
       <section className="py-6 px-4 md:px-8 max-w-7xl mx-auto">
         {/* Mobile view - single image */}
         <div className="md:hidden relative">
-          <img
-            src={images[0]}
-            alt={`${property.title} - Image 1`}
-            className="w-full h-80 object-cover rounded-2xl cursor-pointer shadow-lg"
-            onClick={() => openLightbox(0)}
-          />
+          <div className="relative h-80 w-full rounded-2xl overflow-hidden shadow-lg cursor-pointer" onClick={() => openLightbox(0)}>
+            <Image
+              src={images[0]}
+              alt={`${property.title} - Image 1`}
+              fill
+              loading="lazy"
+              className="object-cover"
+              sizes="100vw"
+            />
+          </div>
           <button
             onClick={() => openLightbox(0)}
             className="absolute bottom-4 right-4 bg-white px-5 py-2.5 rounded-full shadow-xl text-sm font-semibold hover:bg-gray-50 transition-all hover:scale-105 flex items-center gap-2"
@@ -63,48 +68,58 @@ export default function Gallery() {
         {/* Desktop view - grid layout with improved styling */}
         <div className="hidden md:grid grid-cols-4 grid-rows-2 gap-3 h-[500px] relative">
           {/* Main large image - left side spanning 2 rows */}
-          <div className="col-span-2 row-span-2 overflow-hidden rounded-l-2xl shadow-md">
-            <img
+          <div className="col-span-2 row-span-2 overflow-hidden rounded-l-2xl shadow-md relative cursor-pointer" onClick={() => openLightbox(0)}>
+            <Image
               src={images[0]}
               alt={`${property.title} - Image 1`}
-              className="w-full h-full object-cover cursor-pointer hover:scale-105 transition-transform duration-500"
-              onClick={() => openLightbox(0)}
+              fill
+              loading="lazy"
+              className="object-cover hover:scale-105 transition-transform duration-500"
+              sizes="(max-width: 768px) 100vw, 50vw"
             />
           </div>
 
           {/* Top right - 2 images */}
-          <div className="overflow-hidden shadow-md">
-            <img
+          <div className="overflow-hidden shadow-md relative cursor-pointer" onClick={() => openLightbox(1)}>
+            <Image
               src={images[1]}
               alt={`${property.title} - Image 2`}
-              className="w-full h-full object-cover cursor-pointer hover:scale-105 transition-transform duration-500"
-              onClick={() => openLightbox(1)}
+              fill
+              loading="lazy"
+              className="object-cover hover:scale-105 transition-transform duration-500"
+              sizes="(max-width: 768px) 100vw, 25vw"
             />
           </div>
-          <div className="overflow-hidden rounded-tr-2xl shadow-md">
-            <img
+          <div className="overflow-hidden rounded-tr-2xl shadow-md relative cursor-pointer" onClick={() => openLightbox(2)}>
+            <Image
               src={images[2]}
               alt={`${property.title} - Image 3`}
-              className="w-full h-full object-cover cursor-pointer hover:scale-105 transition-transform duration-500"
-              onClick={() => openLightbox(2)}
+              fill
+              loading="lazy"
+              className="object-cover hover:scale-105 transition-transform duration-500"
+              sizes="(max-width: 768px) 100vw, 25vw"
             />
           </div>
 
           {/* Bottom right - 2 images */}
-          <div className="overflow-hidden shadow-md">
-            <img
+          <div className="overflow-hidden shadow-md relative cursor-pointer" onClick={() => openLightbox(3)}>
+            <Image
               src={images[3]}
               alt={`${property.title} - Image 4`}
-              className="w-full h-full object-cover cursor-pointer hover:scale-105 transition-transform duration-500"
-              onClick={() => openLightbox(3)}
+              fill
+              loading="lazy"
+              className="object-cover hover:scale-105 transition-transform duration-500"
+              sizes="(max-width: 768px) 100vw, 25vw"
             />
           </div>
-          <div className="overflow-hidden rounded-br-2xl shadow-md">
-            <img
+          <div className="overflow-hidden rounded-br-2xl shadow-md relative cursor-pointer" onClick={() => openLightbox(4)}>
+            <Image
               src={images[4]}
               alt={`${property.title} - Image 5`}
-              className="w-full h-full object-cover cursor-pointer hover:scale-105 transition-transform duration-500"
-              onClick={() => openLightbox(4)}
+              fill
+              loading="lazy"
+              className="object-cover hover:scale-105 transition-transform duration-500"
+              sizes="(max-width: 768px) 100vw, 25vw"
             />
           </div>
 
@@ -178,9 +193,12 @@ export default function Gallery() {
 
           {/* Main image */}
           <div className="max-w-7xl max-h-[90vh] mx-auto px-20">
-            <img
+            <Image
               src={images[selectedIndex]}
               alt={`${property.title} - Image ${selectedIndex + 1}`}
+              width={1600}
+              height={1200}
+              loading="lazy"
               className="max-w-full max-h-[90vh] object-contain rounded-lg shadow-2xl"
             />
           </div>

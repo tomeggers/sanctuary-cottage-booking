@@ -1,3 +1,4 @@
+import Image from "next/image";
 import content from '@/data/content.json';
 import property from '@/data/property.json';
 
@@ -8,12 +9,13 @@ export default function Hero() {
     <section className="relative bg-stone-900">
       {/* Background Image with Modern Overlay */}
       <div className="absolute inset-0 overflow-hidden">
-        <img
+        <Image
           src={heroImage}
           alt="Sanctuary Cottage"
-          className="w-full h-full object-cover opacity-75"
-          loading="eager"
-          fetchPriority="high"
+          fill
+          priority
+          className="object-cover opacity-75"
+          sizes="100vw"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-stone-900/60 via-stone-900/40 to-stone-900/80" />
       </div>
